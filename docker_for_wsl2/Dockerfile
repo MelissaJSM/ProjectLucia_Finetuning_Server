@@ -29,24 +29,29 @@ RUN pip install uv
 RUN uv pip install --system torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 \
     --index-url https://download.pytorch.org/whl/cu128
 
-
 # 5. 특수 Wheel 파일 설치
 RUN uv pip install --system \
-    https://github.com/kingbri1/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu128torch2.8.0cxx11abiFALSE-cp310-cp310-win_amd64.whl \
-    https://github.com/turboderp-org/exllamav3/releases/download/v0.0.18/exllamav3-0.0.18+cu128.torch2.8.0-cp310-cp310-win_amd64.whl
+    https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.8cxx11abiTRUE-cp310-cp310-linux_x86_64.whl \
+    https://github.com/turboderp-org/exllamav3/releases/download/v0.0.18/exllamav3-0.0.18+cu128.torch2.8.0-cp310-cp310-linux_x86_64.whl
 
-# 6. 일반 라이브러리 일괄 설치
+# 6. 일반 라이브러리 일괄 설치 (mcp, noapi-google-search-mcp, playwright 추가)
 RUN uv pip install --system \
     notebook ipywidgets hf_xet \
     wordsegment \
     python-multipart \
     PyQt5 pytz flask ddgs nvidia-ml-py trafilatura \
-    mysql-connector-python fastapi transformers \
+    mysql-connector-python fastapi transformers soundfile \
     "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning \
     matplotlib x_transformers peft jieba fast_langdetect g2p_en \
-    split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc
+    split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc \
+    mcp noapi-google-search-mcp playwright
 
-# NLTK 데이터 다운로드 (시스템 파이썬 사용)
+# 7. Playwright 브라우저(Chromium) 및 시스템 의존성 설치
+RUN playwright install chromium && \
+    playwright install-deps && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# 8. NLTK 데이터 다운로드 (시스템 파이썬 사용)
 RUN python -m nltk.downloader averaged_perceptron_tagger_eng
 
 # 작업 디렉토리 설정
