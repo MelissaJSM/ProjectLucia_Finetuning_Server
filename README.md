@@ -25,7 +25,7 @@ pip install uv
 
 **2. PyTorch (CUDA 12.8 호환) 설치**
 ```bash
-uv pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url [https://download.pytorch.org/whl/cu128](https://download.pytorch.org/whl/cu128)
+uv pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128
 ```
 
 **3. 필수 라이브러리 일괄 설치**
