@@ -29,7 +29,7 @@ services:
       - "8888:8888" # (선택) Jupyter Notebook용 포트 추가
     
     volumes:
-      - '/home/lucia/ProjectLucia/docker/exllama:/workspace'
+      - '여기에_로컬_경로를_입력해주세요:/workspace'
       - '/tmp/.X11-unix:/tmp/.X11-unix:rw'
       - '/sys/class/drm:/sys/class/drm:ro'
       - '/sys/devices:/sys/devices:ro'
@@ -57,3 +57,4 @@ services:
       - "/dev/dri:/dev/dri"
 
     working_dir: /workspace
+
