@@ -52,6 +52,8 @@ jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.tok
 ---
 
 ## 2. 🐳 Windows WSL2 (Docker Desktop) 환경
+### 2-0 Dockerfile 수정
+다운로드 받은 Dockerfile이 Dockerfile.txt 라면 확장자를 지워줍니다 (Dockerfile)
 
 ### 2-1. 설정 파일 수정 (`docker-compose.yml`)
 `docker-compose.yml` 파일을 열어 `volumes` 부분을 수정합니다.
@@ -170,7 +172,11 @@ sudo apt-get install -y nvidia-container-toolkit
 ```
 
 ### 4-2. 컨테이너 실행
+
+다운로드 받은 Dockerfile이 Dockerfile.txt 라면 확장자를 지워줍니다 (Dockerfile)
 `Dockerfile`과 `docker-compose.yml`이 있는 경로에서 실행합니다.
+
+
 
 ```bash
 docker compose up -d
