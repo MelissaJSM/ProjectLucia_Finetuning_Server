@@ -194,3 +194,8 @@ docker exec -it exllama bash
 ```bash
 jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.token='' --NotebookApp.disable_check_xsrf=True --ServerApp.allow_origin='*' --ServerApp.iopub_data_rate_limit=1.0e10 --ServerApp.max_buffer_size=1000000000 --notebook-dir=/workspace
 ```
+
+
+
+### 주의! exllama 양자화 도중 멈췄을경우 당황하지마시고 노트북 커널을 초기화 하신 후 exllama 부터 다시 시작하시면 이어서 진행합니다.
+
