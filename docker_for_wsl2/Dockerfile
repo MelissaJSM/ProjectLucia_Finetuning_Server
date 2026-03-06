@@ -32,7 +32,7 @@ RUN uv pip install --system torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 \
 # 5. 특수 Wheel 파일 설치
 RUN uv pip install --system \
     https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.8cxx11abiTRUE-cp310-cp310-linux_x86_64.whl \
-    https://github.com/turboderp-org/exllamav3/releases/download/v0.0.22/exllamav3-0.0.22+cu128.torch2.8.0-cp310-cp310-linux_x86_64.whl
+    https://github.com/turboderp-org/exllamav3/releases/download/v0.0.23/exllamav3-0.0.23+cu128.torch2.8.0-cp310-cp310-linux_x86_64.whl
 
 # 6. 일반 라이브러리 일괄 설치 (mcp, noapi-google-search-mcp, playwright 추가)
 RUN uv pip install --system \
@@ -58,4 +58,5 @@ RUN python -m nltk.downloader averaged_perceptron_tagger_eng
 WORKDIR /workspace
 
 CMD ["/bin/bash"]
+
 
