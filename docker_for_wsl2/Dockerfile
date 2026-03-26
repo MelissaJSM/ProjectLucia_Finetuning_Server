@@ -44,7 +44,7 @@ RUN uv pip install --system \
     "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning \
     matplotlib x_transformers peft jieba fast_langdetect g2p_en \
     split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc \
-    mcp noapi-google-search-mcp playwright
+    ddgs
 
 # 7. Playwright 브라우저(Chromium) 및 시스템 의존성 설치
 RUN playwright install chromium && \
