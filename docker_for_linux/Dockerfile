@@ -34,7 +34,7 @@ RUN uv pip install --system \
     https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.8cxx11abiTRUE-cp310-cp310-linux_x86_64.whl \
     https://github.com/turboderp-org/exllamav3/releases/download/v0.0.23/exllamav3-0.0.23+cu128.torch2.8.0-cp310-cp310-linux_x86_64.whl
 
-# 6. 일반 라이브러리 일괄 설치 (mcp, noapi-google-search-mcp, playwright 추가)
+# 6. 일반 라이브러리 일괄 설치
 RUN uv pip install --system \
     notebook ipywidgets hf_xet \
     wordsegment \
@@ -44,7 +44,7 @@ RUN uv pip install --system \
     "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning \
     matplotlib x_transformers peft jieba fast_langdetect g2p_en \
     split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc \
-    mcp noapi-google-search-mcp playwright
+    ddgs
 
 # 7. Playwright 브라우저(Chromium) 및 시스템 의존성 설치
 RUN playwright install chromium && \
