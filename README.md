@@ -40,7 +40,7 @@ uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pyt
 uv pip install https://github.com/kingbri1/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu128torch2.8.0cxx11abiFALSE-cp310-cp310-win_amd64.whl
 ```
 ```bash
-uv pip install https://github.com/turboderp-org/exllamav3/releases/download/v0.0.26/exllamav3-0.0.26+cu128.torch2.8.0-cp310-cp310-win_amd64.whl
+uv pip install https://github.com/turboderp-org/exllamav3/releases/download/v0.0.27/exllamav3-0.0.27+cu128.torch2.8.0-cp310-cp310-win_amd64.whl
 ```
 
 ### 1-3. 실행
@@ -105,7 +105,7 @@ uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pyt
 uv pip install https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.8cxx11abiTRUE-cp310-cp310-linux_x86_64.whl
 ```
 ```bash
-uv pip install https://github.com/turboderp-org/exllamav3/releases/download/v0.0.26/exllamav3-0.0.26+cu128.torch2.8.0-cp310-cp310-linux_x86_64.whl
+uv pip install https://github.com/turboderp-org/exllamav3/releases/download/v0.0.27/exllamav3-0.0.27+cu128.torch2.8.0-cp310-cp310-linux_x86_64.whl
 ```
 
 ### 3-2. 실행
