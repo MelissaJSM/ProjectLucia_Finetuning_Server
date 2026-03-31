@@ -30,7 +30,7 @@ uv pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url ht
 
 **3. 필수 라이브러리 일괄 설치**
 ```bash
-uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc ddgs
+uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc ddgs exllamav3
 ```
 
 **4. Windows용 Wheel 파일 설치 (Flash Attention & ExLlamaV3)**
@@ -39,9 +39,7 @@ uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pyt
 ```bash
 uv pip install https://github.com/kingbri1/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu128torch2.8.0cxx11abiFALSE-cp310-cp310-win_amd64.whl
 ```
-```bash
-uv pip install https://github.com/turboderp-org/exllamav3/releases/download/v0.0.27/exllamav3-0.0.27+cu128.torch2.8.0-cp310-cp310-win_amd64.whl
-```
+
 
 ### 1-3. 실행
 아래 명령어로 Jupyter Lab을 실행한 뒤, `Gemma3_Lucia_exllamav3_clean.ipynb` 파일을 열어 실행하세요.
@@ -95,7 +93,7 @@ uv pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url [h
 
 **2. 필수 라이브러리 일괄 설치**
 ```bash
-uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc ddgs
+uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc ddgs exllamav3
 ```
 
 **3. Linux용 Wheel 파일 설치 (Flash Attention & ExLlamaV3)**
@@ -104,9 +102,7 @@ uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pyt
 ```bash
 uv pip install https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.8cxx11abiTRUE-cp310-cp310-linux_x86_64.whl
 ```
-```bash
-uv pip install https://github.com/turboderp-org/exllamav3/releases/download/v0.0.27/exllamav3-0.0.27+cu128.torch2.8.0-cp310-cp310-linux_x86_64.whl
-```
+
 
 ### 3-2. 실행
 ```bash
