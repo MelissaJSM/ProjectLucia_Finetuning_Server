@@ -46,9 +46,7 @@ RUN uv pip install --system \
     ddgs git+https://github.com/turboderp-org/exllamav3.git
 
 # 7. Playwright 브라우저(Chromium) 및 시스템 의존성 설치
-RUN playwright install chromium && \
-    playwright install-deps && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # 8. NLTK 데이터 다운로드 (시스템 파이썬 사용)
 RUN python -m nltk.downloader averaged_perceptron_tagger_eng
