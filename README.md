@@ -71,7 +71,7 @@ volumes:
 터미널에서 해당 파일이 있는 경로로 이동 후 입력합니다.
 
 ```bash
-docker compose up -d
+docker compose up -d --build --force-recreate
 ```
 
 ### 2-3. 실행
@@ -184,7 +184,7 @@ sudo apt-get install -y nvidia-container-toolkit
 
 
 ```bash
-docker compose up -d
+docker compose up -d --build --force-recreate
 docker start exllama
 ```
 
