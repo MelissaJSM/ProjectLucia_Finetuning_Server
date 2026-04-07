@@ -14,6 +14,8 @@
 2. **Python 환경** 구성 (둘 중 택 1)
    - **Anaconda(Miniconda):** [다운로드 링크](https://www.anaconda.com/download/success) 설치 후 가상환경 생성
    - **Python:** 직접 설치 후 가상환경 생성
+3. **GIT** 설치
+   - winget install --id Git.Git -e --source winget
 
 ### 1-2. 라이브러리 설치
 터미널(CMD/PowerShell)에서 순서대로 입력하세요.
@@ -30,7 +32,7 @@ uv pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url ht
 
 **3. 필수 라이브러리 일괄 설치**
 ```bash
-uv pip install git notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc ddgs git+https://github.com/turboderp-org/exllamav3.git
+uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc ddgs git+https://github.com/turboderp-org/exllamav3.git
 ```
 
 **4. Windows용 Wheel 파일 설치 (Flash Attention & ExLlamaV3)**
@@ -90,10 +92,15 @@ pip install uv
 
 uv pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url [https://download.pytorch.org/whl/cu128](https://download.pytorch.org/whl/cu128)
 ```
+**1_2. GIT 설치**
+```bash
+sudo apt update
+sudo apt install git
+```
 
 **2. 필수 라이브러리 일괄 설치**
 ```bash
-uv pip install git notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc ddgs git+https://github.com/turboderp-org/exllamav3.git
+uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc ddgs git+https://github.com/turboderp-org/exllamav3.git
 ```
 
 **3. Linux용 Wheel 파일 설치 (Flash Attention & ExLlamaV3)**
