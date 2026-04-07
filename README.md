@@ -15,7 +15,9 @@
    - **Anaconda(Miniconda):** [다운로드 링크](https://www.anaconda.com/download/success) 설치 후 가상환경 생성
    - **Python:** 직접 설치 후 가상환경 생성
 3. **GIT** 설치
-   - winget install --id Git.Git -e --source winget
+   ```bash
+   winget install --id Git.Git -e --source winget
+   ```
 
 ### 1-2. 라이브러리 설치
 터미널(CMD/PowerShell)에서 순서대로 입력하세요.
