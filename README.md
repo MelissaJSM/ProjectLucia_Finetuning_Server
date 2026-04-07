@@ -20,7 +20,7 @@
    ```
 
 ### 1-2. 라이브러리 설치
-터미널(CMD/PowerShell)에서 순서대로 입력하세요.
+터미널(CMD/PowerShell), 혹은 anaconda prompt 에서 순서대로 입력하세요.
 
 **1. 패키지 매니저 `uv` 설치**
 ```bash
