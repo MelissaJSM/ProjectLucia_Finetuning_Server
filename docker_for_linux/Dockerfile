@@ -39,7 +39,6 @@ RUN uv pip install --system torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0
 RUN uv pip install --system https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2100-cp313-cp313-linux_x86_64.whl
 
 # 5. 일반 라이브러리 일괄 설치
-# (도커/서버 환경에서 에러를 뿜는 PyQt5는 제거하고, 8번 스텝을 위해 nltk를 추가했습니다)
 RUN uv pip install --system \
     notebook ipywidgets hf_xet wordsegment python-multipart \
     pytz flask ddgs nvidia-ml-py trafilatura \
@@ -52,7 +51,7 @@ RUN uv pip install --system \
 # 6. exllamav3 최신 소스코드 설치
 RUN uv pip install --system git+https://github.com/turboderp-org/exllamav3.git
 
-# 7. NLTK 데이터 다운로드
+# 7. NLTK 데이터 다운로드 (순서 당김)
 RUN python -m nltk.downloader averaged_perceptron_tagger_eng
 
 # 작업 디렉토리 설정
