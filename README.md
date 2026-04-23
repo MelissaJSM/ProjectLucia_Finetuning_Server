@@ -19,12 +19,12 @@
 
 **🪟 Windows (WSL2 / PowerShell 기준):**
 ```powershell
-$env:DOCKER_MODE="finetuning"; docker compose --profile windows up -d --build --force-recreate
+$env:COMPOSE_PROFILES="windows"; $env:DOCKER_MODE="finetuning"; docker-compose up -d --build --force-recreate
 ```
 
 **🐧 Linux:**
 ```bash
-DOCKER_MODE=finetuning docker compose --profile linux up -d --build --force-recreate
+COMPOSE_PROFILES=linux DOCKER_MODE=finetuning docker compose up -d --build --force-recreate
 ```
 
 ### 1-3. Jupyter Lab 접속 및 학습 시작
@@ -70,8 +70,9 @@ uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pyt
 
 **4. 파인튜닝용 Flash Attention 설치 (OS에 맞는 Wheel 주소 사용)**
 ```bash
-# (예시) 파인튜닝 전용(torch2100 호환) Flash Attention 설치
-uv pip install <해당_OS용_Finetune_FlashAttention_Whl_URL>
+#파인튜닝 전용(torch2100 호환) Flash Attention 설치
+uv pip install [<linux_Finetune_FlashAttention_Whl_URL>](https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2100-cp313-cp313-linux_x86_64.whl)
+uv pip install [<windows_Finetune_FlashAttention_Whl_URL>](https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2100-cp313-cp313-linux_x86_64.whl)
 ```
 
 ### 2-3. 실행
@@ -102,13 +103,13 @@ jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.tok
 *(기본값이 Server 모드로 설정되어 있어 명령어 입력이 간편합니다.)*
 
 **🪟 Windows (WSL2 / Docker Desktop):**
-```bash
-docker compose --profile windows up -d --build --force-recreate
+```powershell
+$env:COMPOSE_PROFILES="windows"; $env:DOCKER_MODE="server"; docker-compose up -d --build --force-recreate
 ```
 
 **🐧 Linux:**
 ```bash
-docker compose --profile linux up -d --build --force-recreate
+COMPOSE_PROFILES=linux DOCKER_MODE=server docker compose up -d --build --force-recreate
 ```
 
 ### 1-3. 컨테이너 접속 및 실행
@@ -153,5 +154,6 @@ uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pyt
 **4. Flash Attention 설치 (OS에 맞는 Wheel 주소 사용)**
 ```bash
 # (예시) Server용 Flash Attention 설치
-uv pip install <해당_OS용_FlashAttention_Whl_URL>
+uv pip install [<linux_Finetune_FlashAttention_Whl_URL>](https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2110-cp313-cp313-linux_x86_64.whl)
+uv pip install [<windows_Finetune_FlashAttention_Whl_URL>](https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2110-cp313-cp313-linux_x86_64.whl)
 ```
