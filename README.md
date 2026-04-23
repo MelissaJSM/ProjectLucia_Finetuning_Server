@@ -116,8 +116,8 @@ docker compose --profile linux up -d --build --force-recreate
 # 컨테이너 내부 쉘로 진입
 docker exec -it lucia_server bash 
 
-# 이후 서버 구동 스크립트 또는 Jupyter Lab을 실행하세요.
-jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.token='' --NotebookApp.disable_check_xsrf=True --ServerApp.allow_origin='*'
+# 이후 파일 경로를 찾아서 ui_main.py 를 실행시키면 됩니다.
+python ui_main.py
 ```
 
 ---
