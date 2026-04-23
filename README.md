@@ -35,7 +35,7 @@ docker exec -it lucia_finetuning bash
 
 jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.token='' --NotebookApp.disable_check_xsrf=True --ServerApp.allow_origin='*' --ServerApp.iopub_data_rate_limit=1.0e10 --ServerApp.max_buffer_size=1000000000 --notebook-dir=/workspace
 ```
-브라우저에서 `http://localhost:8888` 에 접속한 뒤, `/workspace/` 경로 내에 있는 `Gemma3_Lucia_exllamav3_clean.ipynb`를 실행하세요.
+브라우저에서 `http://localhost:8888` 에 접속한 뒤, `/workspace/` 경로 내에 있는 `ipynb`를 실행하세요.
 
 *(주의! exllama 양자화 도중 멈췄을 경우 당황하지 마시고 노트북 커널을 초기화하신 후, exllama 블록부터 다시 시작하시면 이어서 진행됩니다.)*
 
