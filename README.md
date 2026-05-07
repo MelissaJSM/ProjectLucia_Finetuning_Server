@@ -83,6 +83,20 @@ uv pip install https://github.com/MelissaJSM/build_flash_attn/releases/download/
 jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.token='' --NotebookApp.disable_check_xsrf=True --ServerApp.allow_origin='*' --ServerApp.iopub_data_rate_limit=1.0e10 --ServerApp.max_buffer_size=1000000000 --notebook-dir=/workspace
 ```
 
+### 오류 안내
+1. 도커환경에서 디스플레이 못찾는 문제
+  qt.qpa.xcb: could not connect to display :0
+  qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+  This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+  
+  Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, webgl, xcb.
+  
+  Aborted (core dumped)
+  
+  해당 오류 발생 시 도커 환경이 아닌 리눅스 메인 환경에서 xhost +local:docker 입력 시 해결됩니다.
+
+2. ui 가 작게나오거나 너무크게나오는 경우
+   디스플레이에서 비율조정 100% 로 하시면 됩니다.
 
 
 # 🖥️ Project Lucia Server Guide
@@ -161,3 +175,19 @@ uv pip install https://github.com/MelissaJSM/build_flash_attn/releases/download/
 ## 윈도우용
 uv pip install https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2110-cp313-cp313-linux_x86_64.whl
 ```
+
+
+### 오류 안내
+1. 도커환경에서 디스플레이 못찾는 문제
+  qt.qpa.xcb: could not connect to display :0
+  qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+  This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+  
+  Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, webgl, xcb.
+  
+  Aborted (core dumped)
+  
+  해당 오류 발생 시 도커 환경이 아닌 리눅스 메인 환경에서 xhost +local:docker 입력 시 해결됩니다.
+
+2. ui 가 작게나오거나 너무크게나오는 경우
+   디스플레이에서 비율조정 100% 로 하시면 됩니다.
