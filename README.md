@@ -57,21 +57,21 @@ pip install uv
 
 **2. 파인튜닝용 PyTorch 설치 (고정 버전)**
 ```bash
-uv pip install torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0 --index-url [https://download.pytorch.org/whl/cu130](https://download.pytorch.org/whl/cu130)
+uv pip install torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0 --index-url https://download.pytorch.org/whl/cu130
 ```
 
 **3. 필수 라이브러리 일괄 설치**
 ```bash
-uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc packaging ninja wheel setuptools nltk git+[https://github.com/turboderp-org/exllamav3.git](https://github.com/turboderp-org/exllamav3.git)
+uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc packaging ninja wheel setuptools nltk git+https://github.com/turboderp-org/exllamav3.git
 ```
 
 **4. 파인튜닝용 Flash Attention 설치 (OS에 맞는 Wheel 주소 사용)**
 ```bash
 # 리눅스용
-uv pip install [https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2100-cp313-cp313-linux_x86_64.whl](https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2100-cp313-cp313-linux_x86_64.whl)
+uv pip install https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2100-cp313-cp313-linux_x86_64.whl
 
-# 윈도우용 (주의: 현재 리눅스용과 동일한 링크로 기재되어 있습니다. 필요시 수정 요망)
-uv pip install [https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2100-cp313-cp313-linux_x86_64.whl](https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2100-cp313-cp313-linux_x86_64.whl)
+# 윈도우용
+uv pip install https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2100-cp313-cp313-win_amd64.whl
 ```
 
 ### 2-3. 실행
@@ -140,22 +140,22 @@ pip install uv
 
 **2. 서버용 PyTorch 및 torchcodec 설치**
 ```bash
-uv pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/cu130](https://download.pytorch.org/whl/cu130)
+uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
 uv pip install torchcodec
 ```
 
 **3. 필수 라이브러리 일괄 설치**
 ```bash
-uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc packaging ninja wheel setuptools nltk git+[https://github.com/turboderp-org/exllamav3.git](https://github.com/turboderp-org/exllamav3.git)
+uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc packaging ninja wheel setuptools nltk git+https://github.com/turboderp-org/exllamav3.git
 ```
 
 **4. Flash Attention 설치 (OS에 맞는 Wheel 주소 사용)**
 ```bash
 # 리눅스용
-uv pip install [https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2110-cp313-cp313-linux_x86_64.whl](https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2110-cp313-cp313-linux_x86_64.whl)
+uv pip install https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2110-cp313-cp313-linux_x86_64.whl
 
-# 윈도우용 (주의: 현재 리눅스용과 동일한 링크로 기재되어 있습니다. 필요시 수정 요망)
-uv pip install [https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2110-cp313-cp313-linux_x86_64.whl](https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2110-cp313-cp313-linux_x86_64.whl)
+# 윈도우용
+uv pip install https://github.com/MelissaJSM/build_flash_attn/releases/download/whl/flash_attn-2.8.3+cu130torch2110-cp313-cp313-win_amd64.whl
 ```
 
 <br>
