@@ -71,7 +71,11 @@ uv pip install https://github.com/MelissaJSM/build_flash_attn/releases/download/
 
 **4. 필수 라이브러리 일괄 설치**
 ```bash
+# 리눅스용
 uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc packaging ninja wheel setuptools nltk git+https://github.com/turboderp-org/exllamav3.git
+
+# 윈도우용
+uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 mecab-ko-msvc mecab-ko-dic-msvc onnxruntime-gpu opencc packaging ninja wheel setuptools nltk git+https://github.com/turboderp-org/exllamav3.git
 ```
 
 
@@ -156,7 +160,11 @@ uv pip install https://github.com/MelissaJSM/build_flash_attn/releases/download/
 
 **4. 필수 라이브러리 일괄 설치**
 ```bash
+# 리눅스용
 uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc packaging ninja wheel setuptools nltk git+https://github.com/turboderp-org/exllamav3.git
+
+# 윈도우용
+uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 mecab-ko-msvc mecab-ko-dic-msvc onnxruntime-gpu opencc packaging ninja wheel setuptools nltk git+https://github.com/turboderp-org/exllamav3.git
 ```
 
 
