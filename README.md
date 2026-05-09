@@ -84,7 +84,7 @@ uv pip uninstall xformers -y
 uv pip install git+https://github.com/facebookresearch/xformers.git
 ```
 
-**6. ffmpeg 설치(아나콘다 환경 기준)**
+**6. ffmpeg 설치(윈도우만! 아나콘다 환경 기준)**
 ```bash
 conda install -c conda-forge ffmpeg
 ```
@@ -183,7 +183,7 @@ uv pip uninstall xformers -y
 uv pip install git+https://github.com/facebookresearch/xformers.git
 ```
 
-**6. ffmpeg 설치(아나콘다 환경 기준)**
+**6. ffmpeg 설치(윈도우만! 아나콘다 환경 기준)**
 ```bash
 conda install -c conda-forge ffmpeg
 ```
