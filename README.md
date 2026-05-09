@@ -78,6 +78,16 @@ uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pyt
 uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 https://github.com/MelissaJSM/build_flash_attn/releases/download/mecab/python_mecab_ko-1.3.7-cp313-cp313-win_amd64.whl https://github.com/MelissaJSM/build_flash_attn/releases/download/mecab/python_mecab_ko_dic-2.1.1.post2-py3-none-any.whl onnxruntime-gpu opencc packaging ninja wheel setuptools nltk git+https://github.com/turboderp-org/exllamav3.git
 ```
 
+**5. xformers 설치**
+```bash
+uv pip uninstall xformers -y
+uv pip install git+https://github.com/facebookresearch/xformers.git
+```
+
+**6. ffmpeg 설치(아나콘다 환경 기준)**
+```bash
+conda install -c conda-forge ffmpeg
+```
 
 ### 2-3. 실행
 아래 명령어로 Jupyter Lab을 실행한 뒤, `Gemma3_Lucia_exllamav3_clean.ipynb` 파일을 열어 실행하세요.
@@ -167,6 +177,16 @@ uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pyt
 uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 https://github.com/MelissaJSM/build_flash_attn/releases/download/mecab/python_mecab_ko-1.3.7-cp313-cp313-win_amd64.whl https://github.com/MelissaJSM/build_flash_attn/releases/download/mecab/python_mecab_ko_dic-2.1.1.post2-py3-none-any.whl onnxruntime-gpu opencc packaging ninja wheel setuptools nltk git+https://github.com/turboderp-org/exllamav3.git
 ```
 
+**5. xformers 설치**
+```bash
+uv pip uninstall xformers -y
+uv pip install git+https://github.com/facebookresearch/xformers.git
+```
+
+**6. ffmpeg 설치(아나콘다 환경 기준)**
+```bash
+conda install -c conda-forge ffmpeg
+```
 
 
 <br>
