@@ -42,6 +42,8 @@ jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.tok
 
 Docker를 사용할 수 없는 경우, 로컬 환경에 직접 구성하는 방법입니다.
 
+Native Windows 일 경우 항상 관리자 권한으로 실행해주세요! (아나콘다, 파이썬 등등)
+
 ### 필수 프로그램 설치
 1. **CUDA Toolkit 13.0** 설치
 2. **Python 3.13** 가상환경 구성 (Anaconda 등 활용)
@@ -134,6 +136,8 @@ python ui_main.py
 ## 2. 🪟 Native Windows / 🐧 Native Linux 환경
 
 Docker를 사용할 수 없는 경우, 로컬 환경에 직접 구성하는 방법입니다.
+
+Native Windows 일 경우 항상 관리자 권한으로 실행해주세요! (아나콘다, 파이썬 등등)
 
 ### 2-1. 필수 프로그램 설치
 1. **CUDA Toolkit 13.0** 설치
