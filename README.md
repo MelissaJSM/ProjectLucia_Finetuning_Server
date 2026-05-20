@@ -214,6 +214,9 @@ xhost +local:docker
 ### 3. 윈도우에서 경로명이 너무 길어서 설치가 불가능하다는 문제
 ** 해결 방법:**
 git config --system core.longpaths true 
+
 을 입력하거나 (재부팅 불필요)
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v LongPathsEnabled /t REG_DWORD /d 1 /f
+
 를 레지스트리에 입력하면됩니다. (재부팅 필요)
