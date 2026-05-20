@@ -92,12 +92,6 @@ uv pip uninstall xformers -y
 uv pip install git+https://github.com/facebookresearch/xformers.git
 ```
 
-**7. pydantic 재설치**
-```bash
-uv pip install -U formatron pydantic
-```
-
-
 ### 2-3. 실행
 아래 명령어로 Jupyter Lab을 실행한 뒤, `Gemma3_Lucia_exllamav3_clean.ipynb` 파일을 열어 실행하세요.
 ```bash
@@ -198,10 +192,6 @@ uv pip install git+https://github.com/turboderp-org/exllamav3.git --no-build-iso
 ```bash
 uv pip uninstall xformers -y
 uv pip install git+https://github.com/facebookresearch/xformers.git
-```
-**7. pydantic 재설치**
-```bash
-uv pip install -U formatron pydantic
 ```
 
 <br>
