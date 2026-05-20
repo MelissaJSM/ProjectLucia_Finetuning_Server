@@ -209,3 +209,11 @@ xhost +local:docker
 ### 2. UI가 너무 작거나 크게 나오는 문제
 **✅ 해결 방법:**
 사용 중인 OS(Windows/Linux)의 디스플레이 설정에서 **비율 및 배율 조정(Scale)을 100%**로 설정하시면 정상적으로 출력됩니다.
+
+
+### 3. 윈도우에서 경로명이 너무 길어서 설치가 불가능하다는 문제
+** 해결 방법:**
+git config --system core.longpaths true 
+을 입력하거나 (재부팅 불필요)
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v LongPathsEnabled /t REG_DWORD /d 1 /f
+를 레지스트리에 입력하면됩니다. (재부팅 필요)
