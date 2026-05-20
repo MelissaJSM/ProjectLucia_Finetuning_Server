@@ -77,13 +77,16 @@ uv pip install https://github.com/MelissaJSM/build_flash_attn/releases/download/
 uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc packaging ninja wheel setuptools nltk git+https://github.com/turboderp-org/exllamav3.git
 
 # 윈도우용
-uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast https://github.com/MelissaJSM/build_flash_attn/releases/download/pyopenjtalk/pyopenjtalk-0.4.1-cp313-cp313-win_amd64.whl jamo ko_pron g2pk2 https://github.com/MelissaJSM/build_flash_attn/releases/download/mecab/python_mecab_ko-1.3.7-cp313-cp313-win_amd64.whl https://github.com/MelissaJSM/build_flash_attn/releases/download/mecab/python_mecab_ko_dic-2.1.1.post2-py3-none-any.whl onnxruntime-gpu opencc packaging ninja wheel setuptools nltk triton-windows git+https://github.com/turboderp-org/exllamav3.git
+uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast https://github.com/MelissaJSM/build_flash_attn/releases/download/pyopenjtalk/pyopenjtalk-0.4.1-cp313-cp313-win_amd64.whl jamo ko_pron g2pk2 https://github.com/MelissaJSM/build_flash_attn/releases/download/mecab/python_mecab_ko-1.3.7-cp313-cp313-win_amd64.whl https://github.com/MelissaJSM/build_flash_attn/releases/download/mecab/python_mecab_ko_dic-2.1.1.post2-py3-none-any.whl onnxruntime-gpu opencc packaging ninja wheel setuptools nltk triton-windows
+```
+
+**5. exllamav3 설치**
+```bash
+uv pip install git+https://github.com/turboderp-org/exllamav3.git --no-build-isolation
 ```
 
 
-
-
-**5. xformers 설치**
+**6. xformers 설치**
 ```bash
 uv pip uninstall xformers -y
 uv pip install git+https://github.com/facebookresearch/xformers.git
@@ -176,14 +179,21 @@ uv pip install https://github.com/MelissaJSM/build_flash_attn/releases/download/
 uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast pyopenjtalk jamo ko_pron g2pk2 python-mecab-ko onnxruntime-gpu opencc packaging ninja wheel setuptools nltk git+https://github.com/turboderp-org/exllamav3.git
 
 # 윈도우용
-uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast https://github.com/MelissaJSM/build_flash_attn/releases/download/pyopenjtalk/pyopenjtalk-0.4.1-cp313-cp313-win_amd64.whl jamo ko_pron g2pk2 https://github.com/MelissaJSM/build_flash_attn/releases/download/mecab/python_mecab_ko-1.3.7-cp313-cp313-win_amd64.whl https://github.com/MelissaJSM/build_flash_attn/releases/download/mecab/python_mecab_ko_dic-2.1.1.post2-py3-none-any.whl onnxruntime-gpu opencc packaging ninja wheel setuptools nltk triton-windows git+https://github.com/turboderp-org/exllamav3.git
+uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pytz flask ddgs nvidia-ml-py trafilatura mysql-connector-python fastapi transformers soundfile "uvicorn[standard]" ffmpeg-python librosa pytorch_lightning matplotlib x_transformers peft jieba fast_langdetect g2p_en split_lang cn2an pypinyin jieba_fast https://github.com/MelissaJSM/build_flash_attn/releases/download/pyopenjtalk/pyopenjtalk-0.4.1-cp313-cp313-win_amd64.whl jamo ko_pron g2pk2 https://github.com/MelissaJSM/build_flash_attn/releases/download/mecab/python_mecab_ko-1.3.7-cp313-cp313-win_amd64.whl https://github.com/MelissaJSM/build_flash_attn/releases/download/mecab/python_mecab_ko_dic-2.1.1.post2-py3-none-any.whl onnxruntime-gpu opencc packaging ninja wheel setuptools nltk triton-windows
 ```
 
-**5. xformers 설치**
+**5. exllamav3 설치**
+```bash
+uv pip install git+https://github.com/turboderp-org/exllamav3.git --no-build-isolation
+```
+
+
+**6. xformers 설치**
 ```bash
 uv pip uninstall xformers -y
 uv pip install git+https://github.com/facebookresearch/xformers.git
 ```
+
 
 <br>
 
