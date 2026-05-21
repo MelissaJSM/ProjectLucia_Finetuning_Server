@@ -240,3 +240,14 @@ git config --system core.longpaths true
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v LongPathsEnabled /t REG_DWORD /d 1 /f
 
 를 레지스트리에 입력하면됩니다. (재부팅 필요)
+
+### 4. cp949 인코딩 문제
+** 해결 발법: **
+환경 변수 - 시스템 변수 편집 - 새로만들기를 클릭합니다.
+
+
+변수이름: PYTHONIOENCODING
+
+변수 값: utf-8
+
+설정하고 사용하시면 됩니다.
