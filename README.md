@@ -190,7 +190,7 @@ uv pip install notebook ipywidgets hf_xet wordsegment python-multipart PyQt5 pyt
 
 **5. exllamav3 설치**
 ```bash
-uv pip install git+https://github.com/turboderp-org/exllamav3.git --no-build-isolation
+pip install git+https://github.com/turboderp-org/exllamav3.git --no-build-isolation
 ```
 
 
