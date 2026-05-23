@@ -140,6 +140,8 @@ jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.tok
 ├── docker-compose.yml
 ├── Dockerfile
 └── project_lucia_docker/ (빈 폴더)
+```
+
 
 ### 1-2. 컨테이너 실행 (OS별 선택)
 터미널에서 파일이 있는 경로로 이동 후, 운영체제에 맞는 명령어를 입력하세요. *(기본값이 Server 모드로 설정되어 있어 명령어 입력이 간편합니다.)*
