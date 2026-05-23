@@ -67,10 +67,13 @@ services:
       # 윈도우에서는 에러를 유발하는 리눅스 경로들(/sys/* 등) 제외
       - './project_lucia_docker:/workspace'
       - './nltk_data:/workspace/nltk_data'
+      - '/tmp/.X11-unix:/tmp/.X11-unix:rw'
     environment:
       CUDA_HOME: /usr/local/cuda
       PATH: /usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
       LD_LIBRARY_PATH: /usr/local/cuda/lib64:/usr/local/lib:/usr/lib
+      DISPLAY: ${DISPLAY}
+      QT_X11_NO_MITSHM: "1"
       NVIDIA_VISIBLE_DEVICES: "all"
       NVIDIA_DRIVER_CAPABILITIES: "compute,utility,graphics"
       NLTK_DATA: /workspace/nltk_data
