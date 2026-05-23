@@ -12,6 +12,11 @@
 * 깃허브 프로젝트 에서 Dockerfile 및 docker-compose.yml 를 다운로드 받아서 디렉토리에 넣습니다.
 * 다운로드 받은 `Dockerfile.txt`가 있다면 확장자를 지워 `Dockerfile`로 만들어 줍니다.
 * 현재 디렉토리에 `project_lucia_docker` 폴더가 없다면 미리 생성해 줍니다.
+* 준비가 다되면 경로는 다음과 같습니다.
+자기가 원하는 경로/
+├── docker-compose.yml
+├── Dockerfile
+└── project_lucia_docker/ (빈 폴더)
 
 ### 1-2. 컨테이너 실행 (OS별 선택)
 터미널에서 파일이 있는 경로로 이동 후, 운영체제에 맞는 명령어를 입력하세요. *(파인튜닝 전용 환경변수를 강제 주입하여 실행합니다.)*
