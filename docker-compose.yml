@@ -64,9 +64,11 @@ services:
               count: all
               capabilities: [gpu]
     volumes:
-      # 윈도우에서는 에러를 유발하는 리눅스 경로들(/sys/* 등) 제외
       - './project_lucia_docker:/workspace'
       - './nltk_data:/workspace/nltk_data'
+      # 🔥 Windows WSLg 디스플레이 소켓 마운트 추가
+      - '/tmp/.X11-unix:/tmp/.X11-unix'
+      - '/mnt/wslg:/mnt/wslg'
     environment:
       CUDA_HOME: /usr/local/cuda
       PATH: /usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
@@ -74,4 +76,8 @@ services:
       NVIDIA_VISIBLE_DEVICES: "all"
       NVIDIA_DRIVER_CAPABILITIES: "compute,utility,graphics"
       NLTK_DATA: /workspace/nltk_data
-    # ❌ 이곳에는 절대 devices: - "/dev/dri:/dev/dri" 가 들어가면 안 됩니다!
+      # 🔥 Windows WSLg 환경변수 추가
+      DISPLAY: ${DISPLAY:-:0}
+      WAYLAND_DISPLAY: ${WAYLAND_DISPLAY:-wayland-0}
+      XDG_RUNTIME_DIR: ${XDG_RUNTIME_DIR:-/run/user/1000}
+      PULSE_SERVER: ${PULSE_SERVER:-/mnt/wslg/PulseServer}
