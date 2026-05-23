@@ -10,13 +10,13 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # 1. 시스템 패키지 설치 및 Python 3.13 강제 설치 (pip 주입 및 ffmpeg 추가)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     software-properties-common git wget nano curl build-essential cmake ninja-build \
-    libcurl4-openssl-dev libssl-dev fonts-nanum \
-    libglib2.0-0 libgl1 \
-    libxcb-xinerama0 libxkbcommon-x11-0 libxcb-cursor0 libxcb-icccm4 \
+    libcurl4-openssl-dev libssl-dev fonts-nanum ffmpeg \
+    libglib2.0-0 libgl1 libglx-mesa0 libegl1 \
+    libxrender1 libxi6 libxkbcommon-x11-0 libdbus-1-3 libfontconfig1 \
+    libxcb1 libxcb-util1 libxcb-xinerama0 libxcb-cursor0 libxcb-icccm4 \
     libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 \
-    libxcb-xfixes0 libxcb-shape0 libfontconfig1 libdbus-1-3 \
+    libxcb-xfixes0 libxcb-shape0 \
     mecab libmecab-dev mecab-ipadic-utf8 \
-    ffmpeg \
     && add-apt-repository ppa:deadsnakes/ppa -y \
     && apt-get update \
     && apt-get install -y --no-install-recommends python3.13 python3.13-dev python3.13-venv \
