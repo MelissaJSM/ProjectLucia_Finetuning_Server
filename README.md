@@ -250,12 +250,12 @@ xhost +local:docker
 **✅ 해결 방법(윈도우, 도커데스크톱):**
 윈도우, 도커데스크톱에서는 xhost 가 통하지 않아서 VcXsrv 를 설치하셔야 합니다.
 
-> `VcXsrv 다운로드 및 설치: [SourceForge VcXsrv 페이지](https://sourceforge.net/projects/vcxsrv/) 에서 다운로드하여 설치합니다.`
-> `XLaunch 실행 (가장 중요): 설치 후 윈도우 시작 메뉴에서 XLaunch를 실행하고 설정을 아래와 같이 진행합니다.`
-> `Display settings: Multiple windows 선택 ➔ Next`
-> `Select how to start client: Start no client 선택 ➔ Next`
-> `Extra settings: Disable access control 항목을 반드시 체크합니다. (체크 안 하면 도커에서 보낸 화면 요청을 윈도우가 거부합니다) ➔ Next`
-> `Finish: Save configuration을 눌러 바탕화면에 저장해두면 다음부터 더블클릭만으로 편하게 켤 수 있습니다. ➔ 완료`
+* VcXsrv 다운로드 및 설치: [SourceForge VcXsrv 페이지](https://sourceforge.net/projects/vcxsrv/) 에서 다운로드하여 설치합니다.
+* XLaunch 실행 (가장 중요): 설치 후 윈도우 시작 메뉴에서 XLaunch를 실행하고 설정을 아래와 같이 진행합니다.
+* Display settings: Multiple windows 선택 ➔ Next
+* Select how to start client: Start no client 선택 ➔ Next
+* Extra settings: Disable access control 항목을 반드시 체크합니다. (체크 안 하면 도커에서 보낸 화면 요청을 윈도우가 거부합니다) ➔ Next
+* Finish: Save configuration을 눌러 바탕화면에 저장해두면 다음부터 더블클릭만으로 편하게 켤 수 있습니다. ➔ 완료
 
 - 이후 컨테이너 환경에서 다음을 입력하고 프로그램을 실행시킵니다.
 ```bash
