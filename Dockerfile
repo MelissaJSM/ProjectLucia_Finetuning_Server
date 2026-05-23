@@ -81,6 +81,9 @@ RUN rm -rf exllamav3 && \
     cd exllamav3 && \
     uv pip install --system --no-build-isolation .
 
+RUN uv pip install --system "pydantic>=2.0,<2.9" --force-reinstall
+
+
 # 8. NLTK 데이터 다운로드
 RUN python -m nltk.downloader averaged_perceptron_tagger_eng
 
