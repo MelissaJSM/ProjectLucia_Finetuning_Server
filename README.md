@@ -8,6 +8,7 @@
 최신 환경에서는 `docker-compose.yml` 내에 Windows와 Linux 프로필이 분리되어 있으며, 로컬 폴더(`./project_lucia_docker`)가 자동으로 마운트됩니다.
 
 ### 1-1. 사전 준비
+* 깃허브 프로젝트 에서 Dockerfile 및 docker-compose.yml 를 다운로드 받습니다.
 * 다운로드 받은 `Dockerfile.txt`가 있다면 확장자를 지워 `Dockerfile`로 만들어 줍니다.
 * 현재 디렉토리에 `project_lucia_docker` 폴더가 없다면 미리 생성해 줍니다.
 
