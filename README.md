@@ -14,13 +14,12 @@
 * 현재 디렉토리에 `project_lucia_docker` 폴더가 없다면 미리 생성해 줍니다.
 * 준비가 다되면 경로는 다음과 같습니다.
   
-자기가 원하는 경로/
-
+```
+디렉토리/
 ├── docker-compose.yml
-
 ├── Dockerfile
-
 └── project_lucia_docker/ (빈 폴더)
+```
 
 
 ### 1-2. 컨테이너 실행 (OS별 선택)
