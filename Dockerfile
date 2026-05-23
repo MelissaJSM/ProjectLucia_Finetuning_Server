@@ -81,6 +81,7 @@ RUN rm -rf exllamav3 && \
     cd exllamav3 && \
     uv pip install --system --no-build-isolation .
 
+# 7-1. pydantic 재설치
 RUN uv pip install --system "pydantic>=2.0,<2.9" --force-reinstall
 
 
