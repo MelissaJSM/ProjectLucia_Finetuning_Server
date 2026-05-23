@@ -129,8 +129,17 @@ jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.tok
 최신 환경에서는 `docker-compose.yml` 내에 Windows와 Linux 프로필이 분리되어 있으며, 로컬 폴더(`./project_lucia_docker`)가 자동으로 마운트됩니다.
 
 ### 1-1. 사전 준비
+* 자기가 원하는 디렉토리를 준비합니다.
+* 깃허브 프로젝트 에서 Dockerfile 및 docker-compose.yml 를 다운로드 받아서 디렉토리에 넣습니다.
 * 다운로드 받은 `Dockerfile.txt`가 있다면 확장자를 지워 `Dockerfile`로 만들어 줍니다.
 * 현재 디렉토리에 `project_lucia_docker` 폴더가 없다면 미리 생성해 줍니다.
+* 준비가 다되면 경로는 다음과 같습니다.
+  
+```
+디렉토리/
+├── docker-compose.yml
+├── Dockerfile
+└── project_lucia_docker/ (빈 폴더)
 
 ### 1-2. 컨테이너 실행 (OS별 선택)
 터미널에서 파일이 있는 경로로 이동 후, 운영체제에 맞는 명령어를 입력하세요. *(기본값이 Server 모드로 설정되어 있어 명령어 입력이 간편합니다.)*
