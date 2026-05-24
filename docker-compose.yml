@@ -48,6 +48,7 @@ services:
       NVIDIA_VISIBLE_DEVICES: "all"
       NVIDIA_DRIVER_CAPABILITIES: "compute,utility,graphics"
       NLTK_DATA: /workspace/nltk_data
+    # 리눅스에만 있어야 하는 하드웨어 마운트
     devices:
       - "/dev/dri:/dev/dri"
 
@@ -63,18 +64,13 @@ services:
               count: all
               capabilities: [gpu]
     volumes:
+      # 윈도우에서는 에러를 유발하는 리눅스 경로들(/sys/* 등) 제외
       - './project_lucia_docker:/workspace'
       - './nltk_data:/workspace/nltk_data'
-      - '/tmp/.X11-unix:/tmp/.X11-unix:rw'
-      - '/mnt/wslg:/mnt/wslg'                     # 🔥 윈도우 내장 WSLg 그래픽 경로 마운트
     environment:
       CUDA_HOME: /usr/local/cuda
       PATH: /usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
       LD_LIBRARY_PATH: /usr/local/cuda/lib64:/usr/local/lib:/usr/lib
-      DISPLAY: :0                                # 🔥 윈도우 호스트(파워쉘) 환경용 디스플레이 고정
-      WAYLAND_DISPLAY: wayland-0                 # 🔥 WSLg 웨일랜드 활성화
-      XDG_RUNTIME_DIR: /mnt/wslg/runtime-dir     # 🔥 GUI 런타임 공유
-      QT_X11_NO_MITSHM: "1"
       NVIDIA_VISIBLE_DEVICES: "all"
       NVIDIA_DRIVER_CAPABILITIES: "compute,utility,graphics"
       NLTK_DATA: /workspace/nltk_data
