@@ -8,9 +8,11 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONUNBUFFERED=1
 
 # 1. 시스템 패키지 설치 및 Python 3.13 강제 설치 (pip 주입 및 ffmpeg 추가)
+# 1. 시스템 패키지 설치 및 Python 3.13 강제 설치 (수정본)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     software-properties-common git wget nano curl build-essential cmake ninja-build \
     libcurl4-openssl-dev libssl-dev fonts-nanum ffmpeg \
+    libavcodec-dev libavformat-dev libavutil-dev libswresample-dev \
     libglib2.0-0 libgl1 libglx-mesa0 libegl1 \
     libxrender1 libxi6 libxkbcommon-x11-0 libdbus-1-3 libfontconfig1 \
     libxcb1 libxcb-util1 libxcb-xinerama0 libxcb-cursor0 libxcb-icccm4 \
@@ -60,7 +62,7 @@ RUN uv pip install --system \
     packaging ninja wheel setuptools nltk PyQt5
 
 # =========================================================
-# 🔥 5-1. SERVER 모드 전용 설치 (torchcodec 분리)
+# 🔥 5-1. SERVER 모드 전용 설치 (torchcodec 분리 및 소스 빌드 강제)
 RUN if [ "$DOCKER_MODE" = "server" ]; then \
         echo ">>> [SERVER 모드] 멀티모달 확장을 위한 torchcodec을 추가 설치합니다." && \
         uv pip install --system torchcodec; \
@@ -83,7 +85,6 @@ RUN rm -rf exllamav3 && \
 
 # 7-1. pydantic 재설치
 RUN uv pip install --system "pydantic>=2.0,<2.9" --force-reinstall
-
 
 # 8. NLTK 데이터 다운로드
 RUN python -m nltk.downloader averaged_perceptron_tagger_eng
