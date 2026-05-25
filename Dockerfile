@@ -70,8 +70,9 @@ RUN if [ "$DOCKER_MODE" = "server" ]; then \
 # =========================================================
 
 # 🔥 빌드 시 GPU 자동 감지 실패 방지 환경 변수
-ENV TORCH_CUDA_ARCH_LIST="8.0;8.6;8.9;9.0+PTX" \
-    CUDA_HOME="/usr/local/cuda"
+ENV TORCH_CUDA_ARCH_LIST="8.0+PTX;8.6+PTX;8.9+PTX;9.0+PTX" \
+    CUDA_HOME="/usr/local/cuda" \
+    FORCE_CUDA="1"
 
 # 6. xformers 공식 저장소에서 직접 빌드 및 설치
 RUN python -m pip uninstall xformers -y || true \
